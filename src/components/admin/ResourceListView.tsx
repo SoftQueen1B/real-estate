@@ -11,6 +11,7 @@ import { endpoints } from "@/lib/endpoints";
 import { formatMoney, humanize, formatDate } from "@/lib/format";
 import type { ColumnDef, ResourceDef } from "@/lib/resources";
 import { ErrorState, LoadingGrid } from "@/components/site/StateViews";
+import { resourceBasePath } from "@/lib/resource-paths";
 
 function renderCell(col: ColumnDef, row: Record<string, any>): string {
   if (col.render) return col.render(row);
@@ -104,7 +105,7 @@ export function ResourceListView({ resource }: { resource: ResourceDef }) {
           </Button>
           {showAdd && (
             <Button asChild size="sm">
-              <Link href={`/admin/${resource.area}/${resource.key}/create`}>Add {resource.singular}</Link>
+              <Link href={`${resourceBasePath(resource)}/create`}>Add {resource.singular}</Link>
             </Button>
           )}
         </div>
@@ -135,7 +136,7 @@ export function ResourceListView({ resource }: { resource: ResourceDef }) {
             </thead>
             <tbody>
               {data.data.map((row) => (
-                <tr key={row.id} className="border-t border-border hover:bg-muted/30">
+                <tr key={row["id"]} className="border-t border-border hover:bg-muted/30">
                   {resource.columns.map((col) => (
                     <td key={col.key} className="px-5 py-4">
                       {col.format === "status" ? (
@@ -152,21 +153,21 @@ export function ResourceListView({ resource }: { resource: ResourceDef }) {
                   <td className="px-5 py-4">
                     <div className="flex items-center gap-3">
                       <Link
-                        href={`/admin/${resource.area}/${resource.key}/${row.id}`}
+                        href={`${resourceBasePath(resource)}/${row["id"]}`}
                         className="text-xs font-bold text-primary hover:underline"
                       >
                         View
                       </Link>
                       {!resource.readOnlyCreate && (
                         <Link
-                          href={`/admin/${resource.area}/${resource.key}/${row.id}/edit`}
+                          href={`${resourceBasePath(resource)}/${row["id"]}/edit`}
                           className="text-xs font-bold text-primary hover:underline"
                         >
                           Edit
                         </Link>
                       )}
                       <button
-                        onClick={() => void remove(row.id)}
+                        onClick={() => void remove(row["id"])}
                         className="text-destructive hover:opacity-70"
                         aria-label="Delete"
                       >

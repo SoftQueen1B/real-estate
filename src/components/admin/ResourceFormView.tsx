@@ -5,10 +5,11 @@ import { useParams, useRouter } from "next/navigation";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { ResourceForm } from "@/components/forms/ResourceForm";
-import { AdminHeader } from "./AdminHeader";
+import { AdminHeader } from "./AdminShell";
 import { api, unwrap } from "@/lib/api";
 import { endpoints } from "@/lib/endpoints";
 import type { ResourceDef } from "@/lib/resources";
+import { resourceBasePath } from "@/lib/resource-paths";
 
 export function ResourceFormView({ resource, mode }: { resource: ResourceDef; mode: "create" | "edit" }) {
   const params = useParams<{ id: string }>();
@@ -33,7 +34,7 @@ export function ResourceFormView({ resource, mode }: { resource: ResourceDef; mo
         description={`Fields submit canonical payloads to the API.`}
         action={
           <Button variant="outline" asChild>
-            <Link href={`/admin/${resource.area}/${resource.key}`}>Back to list</Link>
+            <Link href={resourceBasePath(resource)}>Back to list</Link>
           </Button>
         }
       />
@@ -45,9 +46,9 @@ export function ResourceFormView({ resource, mode }: { resource: ResourceDef; mo
         ) : (
           <ResourceForm
             fields={resource.fields}
-            defaultValues={mode === "edit" ? (editQuery.data as Record<string, any>) : undefined}
+            defaultValues={mode === "edit" ? (editQuery.data as Record<string, any> | undefined) : undefined}
             submitLabel={submitLabel}
-            onCancel={() => router.push(`/admin/${resource.area}/${resource.key}`)}
+            onCancel={() => router.push(resourceBasePath(resource))}
             onSubmit={async (payload) => {
               if (mode === "create") {
                 await api.post(endpoints.admin.resource(resource.endpoint), payload);
@@ -55,7 +56,7 @@ export function ResourceFormView({ resource, mode }: { resource: ResourceDef; mo
                 await api.put(endpoints.admin.resourceItem(resource.endpoint, id!), payload);
               }
               qc.invalidateQueries({ queryKey: ["admin", resource.key] });
-              router.push(`/admin/${resource.area}/${resource.key}`);
+              router.push(resourceBasePath(resource));
             }}
           />
         )}

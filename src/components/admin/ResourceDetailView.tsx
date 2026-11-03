@@ -4,12 +4,13 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
-import { AdminHeader } from "./AdminHeader";
+import { AdminHeader } from "./AdminShell";
 import { api, unwrap } from "@/lib/api";
 import { endpoints } from "@/lib/endpoints";
 import { formatDate, formatMoney, humanize } from "@/lib/format";
 import type { ColumnDef, ResourceDef } from "@/lib/resources";
 import { ErrorState, Spinner } from "@/components/site/StateViews";
+import { resourceBasePath } from "@/lib/resource-paths";
 
 function renderValue(col: ColumnDef, row: Record<string, any>): React.ReactNode {
   if (col.render) return col.render(row);
@@ -47,11 +48,11 @@ export function ResourceDetailView({ resource }: { resource: ResourceDef }) {
         action={
           <div className="flex gap-2">
             <Button variant="outline" asChild>
-              <Link href={`/admin/${resource.area}/${resource.key}`}>Back to list</Link>
+              <Link href={resourceBasePath(resource)}>Back to list</Link>
             </Button>
             {!resource.readOnlyCreate && (
               <Button asChild>
-                <Link href={`/admin/${resource.area}/${resource.key}/${id}/edit`}>Edit</Link>
+                <Link href={`${resourceBasePath(resource)}/${id}/edit`}>Edit</Link>
               </Button>
             )}
           </div>

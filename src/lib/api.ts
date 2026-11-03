@@ -181,8 +181,7 @@ export async function apiFetch<T>(path: string, options: RequestInit = {}): Prom
   })
   const payload = await response.json().catch(() => null)
   if (!response.ok) {
-    const error: ApiError = { message: payload?.message ?? 'Something went wrong. Please try again.', errors: payload?.errors, status: response.status }
-    throw error
+    throw new ApiError(payload?.message ?? 'Something went wrong. Please try again.', response.status, payload?.errors ?? {})
   }
   return payload as T;
 }
