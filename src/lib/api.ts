@@ -184,5 +184,5 @@ export async function apiFetch<T>(path: string, options: RequestInit = {}): Prom
     const error: ApiError = { message: payload?.message ?? 'Something went wrong. Please try again.', errors: payload?.errors, status: response.status }
     throw error
   }
-  return payload as T C
+  return payload as T;
 }
