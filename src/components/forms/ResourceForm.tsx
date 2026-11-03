@@ -8,7 +8,7 @@ import { FieldInput } from "./FieldInput";
 
 interface Props {
   fields: FieldDef[];
-  defaultValues?: Record<string, any> | undefined;
+  defaultValues?: Record<string, any>;
   submitLabel?: string;
   onSubmit: (payload: Record<string, any> | FormData) => Promise<unknown>;
   onCancel?: () => void;

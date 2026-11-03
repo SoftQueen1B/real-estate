@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ChartBar as BarChart3, TrendingUp } from "lucide-react";
+import { BarChart3, TrendingUp } from "lucide-react";
 import { AdminHeader } from "@/components/admin/AdminShell";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
