@@ -1,1 +1,0 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,53016,t=>{"use strict";var e=t.i(43476),o=t.i(42635),r=t.i(54186);t.s(["default",0,function(){return(0,e.jsx)(o.f,{resource:(0,r.f)("transactions"),mode:"create"})}])}]);

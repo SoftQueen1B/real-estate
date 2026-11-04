@@ -3,7 +3,7 @@ import { Link, useNavigate } from "@/lib/legacy-router";
 import { useQuery } from "@tanstack/react-query";
 import { Award, Building, Handshake as HandshakeIcon, KeyRound, Quote, Search, ShieldCheck, Sparkles } from "lucide-react";
 import { useState, type ReactNode } from "react";
-import hero from "@/assets/hero.jpg";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/site/SiteChrome";
 import { PropertyCard } from "@/components/site/PropertyCard";
@@ -80,7 +80,14 @@ export function Home() {
   return (
     <PublicLayout>
       <section className="relative overflow-hidden">
-        <img src={hero} alt="Luxury villa with infinity pool at sunset" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
+        <Image
+          src="/asset/hero.jpg"
+          alt="Luxury villa with infinity pool at sunset"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-hero-overlay" />
         <div className="container-page relative py-24 md:py-36">
           <div className="max-w-2xl animate-rise text-primary-foreground">
