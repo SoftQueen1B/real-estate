@@ -1,0 +1,44 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/content/layout,_N_T_/admin/content/blog/layout,_N_T_/admin/content/blog/page,_N_T_/admin/content/blog"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/admin/content/blog/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 64,
+    "slots": {
+      "children": {
+        "hints": 96,
+        "slots": {
+          "children": {
+            "hints": 96,
+            "slots": {
+              "children": {
+                "hints": 96,
+                "slots": {
+                  "children": {
+                    "hints": 160,
+                    "slots": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/cd511b610b637c61cdb22007d7dca8a3dc344befd17ebabe8f67036d151dea02/$/admin/content/blog",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/admin/content/blog/page"
+    },
+    "isFallback": false
+  }
+}

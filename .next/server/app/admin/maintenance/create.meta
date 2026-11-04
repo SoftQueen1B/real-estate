@@ -1,0 +1,44 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/maintenance/layout,_N_T_/admin/maintenance/create/layout,_N_T_/admin/maintenance/create/page,_N_T_/admin/maintenance/create"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/admin/maintenance/create/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 64,
+    "slots": {
+      "children": {
+        "hints": 96,
+        "slots": {
+          "children": {
+            "hints": 96,
+            "slots": {
+              "children": {
+                "hints": 96,
+                "slots": {
+                  "children": {
+                    "hints": 160,
+                    "slots": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/aa1d04f9fdc57a5ea716c665af5b701412c41cd0184467c4215a2dd04f949770/$/admin/maintenance/create",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/admin/maintenance/create/page"
+    },
+    "isFallback": false
+  }
+}

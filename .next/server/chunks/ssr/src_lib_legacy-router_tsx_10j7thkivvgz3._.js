@@ -1,0 +1,3 @@
+module.exports=[91488,a=>{"use strict";var b=a.i(87924),c=a.i(38246),d=a.i(50944);a.s(["L",0,function({to:a,children:e,className:f,onClick:g,activeProps:h,...i}){let j=(0,d.usePathname)(),k=i.search,l=i.params,m=l?Object.entries(l).reduce((a,[b,c])=>a.replace(`$${b}`,String(c)),a):a,n=k?`?${new URLSearchParams(k).toString()}`:"",o=`${m}${n}`,p=(j===m||"/"!==a&&j.startsWith(m))&&h?.className?`${f??""} ${h.className}`.trim():f;return(0,b.jsx)(c.default,{href:o,className:p,...g?{onClick:g}:{},...i,children:e})},"e",0,()=>{let a=(0,d.useRouter)();return({to:b,search:c,replace:d})=>{let e=c?`?${new URLSearchParams(c).toString()}`:"";a[d?"replace":"push"](`${b}${e}`)}}])}];
+
+//# sourceMappingURL=src_lib_legacy-router_tsx_10j7thkivvgz3._.js.map

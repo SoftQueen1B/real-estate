@@ -1,0 +1,39 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/tenancies/layout,_N_T_/admin/tenancies/page,_N_T_/admin/tenancies"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/admin/tenancies/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 64,
+    "slots": {
+      "children": {
+        "hints": 96,
+        "slots": {
+          "children": {
+            "hints": 96,
+            "slots": {
+              "children": {
+                "hints": 160,
+                "slots": null
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/f21b0f4a5864fc9d77240861f8b2690bfe00368be36930bda1ddaf1ad2af89b1/$/admin/tenancies",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/admin/tenancies/page"
+    },
+    "isFallback": false
+  }
+}

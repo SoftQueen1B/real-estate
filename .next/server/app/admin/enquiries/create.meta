@@ -1,0 +1,44 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/enquiries/layout,_N_T_/admin/enquiries/create/layout,_N_T_/admin/enquiries/create/page,_N_T_/admin/enquiries/create"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/admin/enquiries/create/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 64,
+    "slots": {
+      "children": {
+        "hints": 96,
+        "slots": {
+          "children": {
+            "hints": 96,
+            "slots": {
+              "children": {
+                "hints": 96,
+                "slots": {
+                  "children": {
+                    "hints": 160,
+                    "slots": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/b5b6e49f001834940c5b590e6e674f42486403f4a4dedffef90e3d4eadd256d1/$/admin/enquiries/create",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/admin/enquiries/create/page"
+    },
+    "isFallback": false
+  }
+}

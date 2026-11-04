@@ -1,0 +1,44 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/transactions/layout,_N_T_/admin/transactions/create/layout,_N_T_/admin/transactions/create/page,_N_T_/admin/transactions/create"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/admin/transactions/create/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 64,
+    "slots": {
+      "children": {
+        "hints": 96,
+        "slots": {
+          "children": {
+            "hints": 96,
+            "slots": {
+              "children": {
+                "hints": 96,
+                "slots": {
+                  "children": {
+                    "hints": 160,
+                    "slots": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/0ed493dbbd46ee443ae41d80b19551bfce59b527664c8c56b6252fb5287228a8/$/admin/transactions/create",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/admin/transactions/create/page"
+    },
+    "isFallback": false
+  }
+}

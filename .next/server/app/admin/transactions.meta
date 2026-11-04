@@ -1,0 +1,39 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/transactions/layout,_N_T_/admin/transactions/page,_N_T_/admin/transactions"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/admin/transactions/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 64,
+    "slots": {
+      "children": {
+        "hints": 96,
+        "slots": {
+          "children": {
+            "hints": 96,
+            "slots": {
+              "children": {
+                "hints": 160,
+                "slots": null
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/cbee5885d16e8915f5ba67e61dac251ebf77b1d9da8829453802d86420423575/$/admin/transactions",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/admin/transactions/page"
+    },
+    "isFallback": false
+  }
+}
