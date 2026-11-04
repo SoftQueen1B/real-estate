@@ -8,10 +8,10 @@ import { FieldInput } from "./FieldInput";
 
 interface Props {
   fields: FieldDef[];
-  defaultValues?: Record<string, any>;
-  submitLabel?: string;
+  defaultValues?: Record<string, any> | undefined;
+  submitLabel?: string | undefined;
   onSubmit: (payload: Record<string, any> | FormData) => Promise<unknown>;
-  onCancel?: () => void;
+  onCancel?: (() => void) | undefined;
 }
 
 /** Reusable create/edit form: canonical field names, server-side validation shown inline. */
